@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0672ca;
+    color: white;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Barre de navigation stylisée */
+.nav-bar {
+    background-color: #045fa0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+    gap: 40px;
+}
+
+.nav-pages li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-pages li a:hover {
+    color: #ffdd57;
+    border-bottom: 2px solid #ffdd57;
+}
+
+/* Section principale */
+section {
+    margin: 40px auto;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tableau (au cas où tu les ajoutes plus tard) */
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 100%;
+}
+
+table th, td {
+    border: 1px solid #ddd;
+    height: 50px;
+    text-align: center;
+    width: 25%;
+}
+
+table th {
+    color: white;
+    background-color: #0672ca;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #0672ca;
+    color: white;
+    text-align: center;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer ul li {
+    flex: 1;
+    text-align: center;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Liens principaux (réutilisation) */
+a.sites:link,
+a.sites:visited {
+    color: white;
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif; /* Set a readable font */
+    margin: 0; /*Remove margin and padding */
+    padding: 0;
+    background-color: white; /* Set background color to white and text color to black */
+    color: black;
+    font-size: 20px; /* Increase the font size for a better readable font */
+}
+
+header 
+{
+    text-align: center; /* Center the text */
+    padding: 10px;
+    background-color: #0672ca; /* Set background color to blue and text color to white*/
+    color: white;
+    font-size: 10px;
+}
+section{
+  margin: 20px auto; /* Add vertical spacing with 20px and center the section */
+  max-width: 800px; /* Limit the section width for better readability */
+  background: white; /* Set background color to white */
+  padding: 20px;
+  border-radius: 8px; /* Round the corners of the section */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow for the section box */
+}
+section#last{
+	margin-bottom: 150px; /* Add white spaces so the footer doesnt annoy the second table */
+}
+table{
+  border-collapse: collapse; /* Collapse the border of the table */
+  margin: 0 auto; /* Center the table */
+  width: 100%;
+}
+table th, td {
+  border: 1px solid #ddd; /* Add a light border with white color */
+  height: 50px; /* Set the height for every cells */
+  text-align: center; /* Center the text */
+  width: 25%;
+}
+table th {
+  color: white; /* Set the background color to blue and text color to white */
+  background-color: #0672ca;
+}
+
+h2 {
+  text-align: center;
+}
+
+footer 
+{
+  position: fixed; /* Fixes the footer at the bottom */
+  left: 0; /* Place the footer to the left */
+  bottom: 0; /* Place the footer to the bottom */
+  width: 100%; /* Makes the footer span the full width of the page */
+  padding-bottom: 15px; 
+  background-color: #0672ca; /* Set the background color to blue and the text color to white */
+  color: white; 
+  text-align: center; 
+}
+
+footer ul li {
+  float: left; /* Aligns list items to the left */
+  width: 33%; 
+  list-style-type: none; /* Removes default bullet points from the list */
+}
+
+footer ul li:first-child {
+  text-align: left; /* Align the first item to the left */
+}
+
+footer ul li:last-child {
+  float: right; /* Align the last item to the right */
+  text-align: right;
+}
+a.sites:link, a.sites:visited {
+    color: white; /* Set visited links text color to white */
+    text-decoration: none; /* Removes underlines from links*/
+ }
+
+nav.nav-pages {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+    list-style: none;
+    background-color: #0672ca;
+    margin: 0;
+}
+
+nav.nav-pages li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav.nav-pages li a:hover {
+    text-decoration: underline;
+}
+
