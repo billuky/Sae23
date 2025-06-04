@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['connecte']) || $_SESSION['connecte'] !== true) {
+if (!isset($_SESSION['connecte']) || $_SESSION['role'] !== gestionnaire) {
     header("Location: login.php");
     exit();
 }
@@ -38,12 +38,15 @@ mysqli_close($connexion);
             <h1>Données metriques <strong>SAE23</strong></h1> <!-- header of the page -->
         </header>
 
-		<nav class="nav-bar">
-    <ul class="nav-pages">
-        <li><a href="acceuil.html">Accueil</a></li>
-        <li><a href="logoff.php">Déconnexion</a></li>
-    </ul>
-</nav>
+<nav class="nav-bar">
+        <ul class="nav-pages">
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="http://localhost:1880/">Administration</a></li>
+            <li><a href="login.php">Gestion</a></li>
+            <li><a href="consultation.html">Consultation</a></li>
+            <li><a href="logoff.php">Deconnexion</a></li>
+        </ul>
+    </nav>
 
 <section>
     <h2>Tableau de luminosité de la salle E101</h2>

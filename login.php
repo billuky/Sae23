@@ -11,14 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Erreur de connexion à la base : " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM administration WHERE login = '$login' AND mdp = '$mdp'";
-    $result_admin = mysqli_query($connexion, $sql);
-
 	$sql_gestion = "SELECT * FROM gestionnaires WHERE login = '$login' AND mdp = '$mdp'";
     $result_gestion = mysqli_query($connexion, $sql_gestion);
 
-    if (mysqli_num_rows($result_admin) == 1 || mysqli_num_rows($result_gestion) == 1) {
+    if (mysqli_num_rows($result_gestion) == 1) {
         $_SESSION['connecte'] = true;
+        $_SESSION['role'] = 'gestionnaire';
         header("Location: index.php");
         exit();
     } else {
@@ -44,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <nav class="nav-bar">
         <ul class="nav-pages">
             <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="http://localhost:1880/">Administration</a></li>
             <li><a href="#">Gestion</a></li>
             <li><a href="consultation.html">Consultation</a></li>
             <li class="dropdown"> <!-- création d'un menu déroulant pour la présentation -->

@@ -1,21 +1,48 @@
+<?php
+session_start();
+$erreur = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $login = $_POST['login'];
+    $mdp = $_POST['mdp'];
+
+    $connexion = mysqli_connect("localhost", "suau", "passroot", "sae23");
+    if (!$connexion) {
+        die("Erreur de connexion à la base : " . mysqli_connect_error());
+    }
+
+	$sql_gestion = "SELECT * FROM administration WHERE login = '$login' AND mdp = '$mdp'";
+    $result_gestion = mysqli_query($connexion, $sql_gestion);
+
+    if (mysqli_num_rows($result_gestion) == 1) {
+        $_SESSION['connecte'] = true;
+        $_SESSION['role'] = 'admin';
+        header("Location: http://localhost:1880/");
+        exit();
+    } else {
+        $erreur = "Identifiants incorrects.";
+    }
+
+    mysqli_close($connexion);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gay</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Une solution informatique pour l'entreprise ! <strong>SAé 23</strong></h1>
-    </header>
 
-    <!-- Navigation stylisée -->
+	<header>
+        <h1>Une solution informatique pour l'entreprise ! <strong>SAe 23</strong></h1>
+    </header>
     <nav class="nav-bar">
         <ul class="nav-pages">
-            <li><a href="#">Accueil</a></li>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="#">Administration</a></li>
             <li><a href="login.php">Gestion</a></li>
             <li><a href="consultation.html">Consultation</a></li>
             <li class="dropdown"> <!-- création d'un menu déroulant pour la présentation -->
@@ -30,13 +57,15 @@
             </li>
         </ul>
     </nav>
-
-    <section>
-        <h2>Présentation de la SAé Numéro 23</h2>
-        <p>Ici, vous allez trouver tous les pages nécessaires et vous serez guider à travers ces dernières.</p>
-        <p>Veuillez passer aux pages suivantes, se trouvant ci-dessus.</p>
-    </section>
-
+<section>
+    <h2>Connexion</h2>
+    <form method="post" action="">
+        <label>Login : <input type="text" name="login" required></label><br>
+        <label>Mot de passe : <input type="password" name="mdp" required></label><br>
+        <button type="submit">Se connecter</button>
+    </form>
+    <?php if ($erreur != "") echo "<p style='color:red;'>$erreur</p>"; ?>
+</section>
     <footer>
         <ul>
             <li><a class="sites" href="https://www.iut-blagnac.fr/fr/">IUT de Blagnac</a></li>
@@ -46,4 +75,3 @@
     </footer>
 </body>
 </html>
-
