@@ -39,11 +39,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
 	<header>
-        <h1>Une solution informatique pour l'entreprise ! <strong>SAé 23</strong></h1>
+        <h1>Une solution informatique pour l'entreprise ! <strong>SAe 23</strong></h1>
     </header>
-	<nav class="nav-bar">
+    <nav class="nav-bar">
         <ul class="nav-pages">
-            <li><a href="acceuil.html">Acceuil</a></li>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="#">Gestion</a></li>
+            <li><a href="consultation.html">Consultation</a></li>
+            <li class="dropdown"> <!-- création d'un menu déroulant pour la présentation -->
+                <a class="dropbouton">Gestion de Project</a> <!-- Bouton principal -->
+                <div class="dropdown-contenue"> <!-- Contenue du menu déroulant qui ne s'affichent que si on le survole avec le curseur -->
+                    <a href="livrables.html">Livrables</a>
+                    <a href="gantt.html">Organisation du projet</a>
+                    <a href="synthese.html">Synthèse personnelle</a>
+                    <a href="problemes.html">Problèmes rencontrés</a>
+                    <a href='satisfaction.html'>Degré de satisfaction</a>
+                </div>
+            </li>
         </ul>
     </nav>
 <section>
