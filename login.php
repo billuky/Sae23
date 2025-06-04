@@ -42,9 +42,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <nav class="nav-bar">
         <ul class="nav-pages">
             <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="http://localhost:1880/">Administration</a></li>
+            <li class="dropdown"> <!-- création d'un menu déroulant pour la présentation -->
+                <a class="dropbouton">Administration</a> <!-- Bouton principal -->
+                <div class="dropdown-contenue"> <!-- Contenue du menu déroulant qui ne s'affichent que si on le survole avec le curseur -->
+                    <a href="loginA.php">Modification des tables</a>
+                    <a href="loginAA.php">Affichage de toute les salles</a>
+                </div>
+            </li>
             <li><a href="#">Gestion</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
+            <li><a href="consultation.php">Consultation</a></li>
             <li class="dropdown"> <!-- création d'un menu déroulant pour la présentation -->
                 <a class="dropbouton">Gestion de Project</a> <!-- Bouton principal -->
                 <div class="dropdown-contenue"> <!-- Contenue du menu déroulant qui ne s'affichent que si on le survole avec le curseur -->
@@ -58,7 +64,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </ul>
     </nav>
 <section>
-    <h2>Connexion</h2>
+    <h2>Connexion à la consultation des données métriques</h2>
+    <p>Completez le formulaire ci-dessous pour vous authentifier. Seulement les gestionnaires peuvent accéder aux données.
+    </p>
+    <p>
+        Si vous souhaitez prendre connaissance des dernières données enregistrées veuillez cliquer sur ce lien : <a href="consultation.php" class="sites">Consultation des données libre d'accès</a>
+    </p>
     <form method="post" action="">
         <label>Login : <input type="text" name="login" required></label><br>
         <label>Mot de passe : <input type="password" name="mdp" required></label><br>

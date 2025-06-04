@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['connecte']) || $_SESSION['role'] !== gestionnaire) {
+if (!isset($_SESSION['connecte']) || $_SESSION['role'] !== 'gestionnaire') {
     header("Location: login.php");
     exit();
 }
@@ -41,9 +41,15 @@ mysqli_close($connexion);
 <nav class="nav-bar">
         <ul class="nav-pages">
             <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="http://localhost:1880/">Administration</a></li>
-            <li><a href="login.php">Gestion</a></li>
-            <li><a href="consultation.html">Consultation</a></li>
+            <li class="dropdown"> <!-- création d'un menu déroulant pour la présentation -->
+                <a class="dropbouton">Administration</a> <!-- Bouton principal -->
+                <div class="dropdown-contenue"> <!-- Contenue du menu déroulant qui ne s'affichent que si on le survole avec le curseur -->
+                    <a href="loginA.php">Modification des tables</a>
+                    <a href="loginAA.php">Affichage de toute les salles</a>
+                </div>
+            </li>
+            <li><a href="index.php">Gestion</a></li>
+            <li><a href="consultation.php">Consultation</a></li>
             <li><a href="logoff.php">Deconnexion</a></li>
         </ul>
     </nav>
