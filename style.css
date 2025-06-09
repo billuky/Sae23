@@ -126,6 +126,9 @@ a.sites:visited {
     color: #0672ca;
     text-decoration: none;
 }
+a.sites:hover {
+  background-color: white;
+}
 body {
     font-family: Arial, sans-serif; /* Set a readable font */
     margin: 0; /*Remove margin and padding */
@@ -200,10 +203,6 @@ footer ul li:last-child {
   float: right; /* Align the last item to the right */
   text-align: right;
 }
-a.sites:link, a.sites:visited {
-    color: white; /* Set visited links text color to white */
-    text-decoration: none; /* Removes underlines from links*/
- }
 
 nav.nav-pages {
     display: flex;
@@ -271,3 +270,20 @@ li.dropdown a {
   .dropdown:hover .dropdown-contenue {
     display: block; /* Affiche le contenu déroulant lorsqu'on survole l'élément parent */
   }
+
+.imglivrables{
+  width: 100%;
+}
+p#finit {
+  font-weight: bold; 
+  text-align: center; 
+  margin-top: 1rem; 
+  font-size: 1.2rem;
+}
+
+section ul {
+  line-height: 1.6;
+}
+section ol {
+  line-height: 1.6;
+}

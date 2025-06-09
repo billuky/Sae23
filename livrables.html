@@ -29,7 +29,6 @@
                 <a class="dropbouton">Gestion de Project</a> <!-- Bouton principal -->
                 <div class="dropdown-contenue"> <!-- Contenue du menu déroulant qui ne s'affichent que si on le survole avec le curseur -->
                     <a href="#">Livrables</a>
-                    <a href="gantt.html">Organisation du projet</a>
                     <a href="synthese.html">Synthèse personnelle</a>
                     <a href="problemes.html">Problèmes rencontrés</a>
                     <a href='satisfaction.html'>Degré de satisfaction</a>
@@ -39,25 +38,56 @@
     </nav>
 
     <section>
-    <h2>Livrables 1</h2>
-    <h3>Gantt</h3>
-    <p>dsds</p>
-    <h3>Concepteur PhpMyAdmin</h3>
-    <p>dsds</p>
+        <h2>Livrable 1</h2>
+        <h3>Organisation du Projet</h2>
+        <h4>Diagramme de Gantt</h4>
+            <p>
+                Voici le plan et le partage des différentes tâches sur les diverses séances en autonomie et avec l’enseignant.
+            </p>
+            <p>
+                Cependant, le diagramme à été réalisé pendant la première séance. C'est pourquoi, les tâches n'ont pas d'avancement.
+            </p>
+            <img src="images/gantt.png" alt="Image du Gantt" class="imglivrables">
+        <h4>Tableaux Trello</h4>
+        <p>
+            Ci-dessous est affiché le tableau Trello répertoriant les tâches faites, à faire et en cours. Ce tableau nous a permis de nous organiser dans l'exécution du projet.
+        </p>
+        <p>
+            Cette fois le Tableau a été fait au milieu des créneaux prévus pour travailler pour la sae23. Donc nous pouvons voir l'évolution des tâches ainsi que l'avancement du projet.
+        </p>
+        <img src="images/trello.png" alt="Image du Tableau Trello" class="imglivrables">
+        <h3>Concepteur PhpMyAdmin</h3>
+        <p>
+            Dans le cadre de notre projet SAÉ23, nous avons conçu une base de données relationnelle MySQL, implémentée via l'outil PhpMyAdmin. Ce schéma permet de structurer et stocker les données issues des capteurs IoT déployés dans les bâtiments de l’IUT. La conception respecte les contraintes imposées dans le cahier des charges.
+        </p>
+        <img src="images/phpmyadmin.png" class="imglivrables" alt="Image de l'onglet Concepteur dans phpmyadmin">
     </section>
     <section>
-    <h2>Livrable 2</h2>
-    <h3>Flow Node-Red</h3>
-    <p>dsds</p>
-    <h3>Dashboard Grafana</h3>
-    <p>dsds</p>
+        <h2>Livrable 2</h2>
+        <h3>Flow Node-Red</h3>
+        <p>Pour ce livrable nous avons déployé des nœuds connectés ensembles et configurés sur les éléments essentiels afin d’afficher les données récupérées sur une interface graphique.</p>
+        <img src="images/flow.png" alt="Image du Flow NodeRed" class="imglivrables">
+        <p>
+            Ce flow Node-RED est conçu pour collecter, stocker et visualiser des données de tous les types provenant tous les capteurs distincts. Chaque capteur envoie ses mesures via MQTT, et ces messages sont directement récupérés par Node-RED. Une fois reçues, les données sont simultanément enregistrées dans une base InfluxDB (influxdbRT) pour permettre un archivage historique et une analyse ultérieure.
+        </p>
+        <p>
+            Ainsi, par une interface que uniquement l'administrateur ne peut accéder, on peut y voir toutes les données de tous les capteurs. Comme affiché ci-dessous pour la salle E208 :
+        </p>
+        <img src="images/e208.png" class="imglivrables" alt="Image des données de la salle E208">
+        <p>
+            Et de la salle E101 :
+        </p>
+        <img src="images/e101.png" class="imglivrables" alt="Image des données de la salle E101">
+        <h3>Dashboard Grafana</h3>
+        <p>
+            Depuis Grafana, nous avons importé la base de données InfluxDB que l’on a nommée influxdb-sae23. Ci-dessous, l’exemple de sélection pour afficher le dashboard concernant la luminosité de la salle E208 dans le bâtiment RT.
+        </p>
+        <img src="images/grafana.png" alt="Image de grafana" class="imglivrables">
     </section>
     <section id="last">
-    <h2>Livrable 3</h2>
-    <h3>Version finale du Projet</h3>
-    <p>dsds</p>
-    <h3>Finalisation du D�pot Git hub</h3>
-    <p>dsds</p>
+        <h2>Livrable 3</h2>
+        <h3>Finalisation du Dépot Git hub</h3>
+        <p>Le lien vers le dépot github contenant les fichiers du site internet est disponible sous cette adresse : <a href="jsp" class="sites">ssss</a></p>
     </section>
         <footer>
         <ul>

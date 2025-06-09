@@ -55,7 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <a class="dropbouton">Gestion de Project</a> <!-- Bouton principal -->
                 <div class="dropdown-contenue"> <!-- Contenue du menu déroulant qui ne s'affichent que si on le survole avec le curseur -->
                     <a href="livrables.html">Livrables</a>
-                    <a href="gantt.html">Organisation du projet</a>
                     <a href="synthese.html">Synthèse personnelle</a>
                     <a href="problemes.html">Problèmes rencontrés</a>
                     <a href='satisfaction.html'>Degré de satisfaction</a>

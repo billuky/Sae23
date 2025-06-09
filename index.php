@@ -124,6 +124,8 @@ mysqli_close($connexion);
     <?php else : ?>
         <p>Aucune donnée enregistrée pour E208.</p>
     <?php endif; ?>
+
+    <p><strong>Veillez bien à vous deconnecter après consultation des données.</strong></p>
 </section>
 
 <footer>
