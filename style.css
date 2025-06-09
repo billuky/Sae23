@@ -203,6 +203,11 @@ footer ul li:last-child {
   float: right; /* Align the last item to the right */
   text-align: right;
 }
+a.site:link,
+a.site:visited {
+    color: white;
+    text-decoration: none;
+}
 
 nav.nav-pages {
     display: flex;
